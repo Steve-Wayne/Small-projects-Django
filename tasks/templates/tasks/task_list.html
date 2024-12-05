@@ -1,0 +1,32 @@
+{% extends 'tasks/base.html' %}
+
+
+{% block title %}Task List{% endblock %}
+
+{% block content %}
+<h2>Your Tasks</h2>
+<ul>
+    {% for task in tasks %}
+    <li>
+        <div class="task-item">
+            <span class="task-title">{{ task.title }}</span>
+
+            <!-- Completion Status -->
+            {% if task.completition_status %}
+            <span class="completed-status"> Completed</span>
+            {% else %}
+            <span class="not-completed-status"> Not Completed</span>
+            {% endif %}
+
+            <!-- Edit and Delete Buttons -->
+            <div class="button-group">
+                <a href="{% url 'task_update' task.pk %}" class="button edit-btn">Edit</a>
+                <a href="{% url 'task_delete' task.pk %}" class="button delete-btn">Delete</a>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'task_create' %}" class="button add-btn">Add New Task</a>
+{% endblock %}
