@@ -1,0 +1,51 @@
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environment
+env/
+venv/
+myenv/
+ENV/
+
+# Django Stuff
+db.sqlite3
+*.log
+
+# Sensitive or Config Files
+*.env
+config.json
+
+# Media Files
+media/
+uploads/
+
+# Static Files
+staticfiles/
+*.css.map
+*.js.map
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PyCharm and JetBrains files
+*.iml
+*.ipr
+*.iws
+
+# Test Coverage Reports
+htmlcov/
+.coverage
+*.cover
+
+# Pycharm and JetBrains project files
+.idea/
